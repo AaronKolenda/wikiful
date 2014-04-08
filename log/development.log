@@ -75,3 +75,151 @@ Migrating to CreateCategories (20140408211721)
   [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140408211721"]]
   [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'History' LIMIT 1[0m
+  [1m[35mSQL (60.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "History"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Biology' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Biology"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Literature' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Literature"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Mathematics' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Mathematics"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Music Theory' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Music Theory"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Computer Science' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Computer Science"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Sociology' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Sociology"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Chemistry' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00], ["name", "Chemistry"], ["updated_at", Tue, 08 Apr 2014 21:36:03 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "categories"
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from block in <top (required)> at /home/action/workspace/wikiful/db/seeds.rb:23)
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1 OFFSET 4[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'History' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.4ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Biology' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Literature' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Mathematics' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Music Theory' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Sociology' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Chemistry' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "categories"
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from block in <top (required)> at /home/action/workspace/wikiful/db/seeds.rb:23)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1 OFFSET 7[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'History' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.4ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Biology' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Literature' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Mathematics' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Music Theory' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Sociology' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Chemistry' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "categories"
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from block in <top (required)> at /home/action/workspace/wikiful/db/seeds.rb:23)
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1 OFFSET 5[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'History' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Biology' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Literature' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Mathematics' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Music Theory' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Sociology' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Chemistry' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "categories"
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from block in <top (required)> at /home/action/workspace/wikiful/db/seeds.rb:23)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1 OFFSET 4[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'History' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Biology' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Literature' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Mathematics' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Music Theory' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Sociology' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT 1 AS one FROM "categories" WHERE "categories"."name" = 'Chemistry' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "categories"
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from block in <top (required)> at /home/action/workspace/wikiful/db/seeds.rb:23)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1 OFFSET 2[0m
